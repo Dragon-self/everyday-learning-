@@ -1,0 +1,98 @@
+# everyday-learning-
+just for store the new learning projects
+#define _CRT_SECURE_NO_WARNINGS
+
+
+#include <stdio.h>
+int main()
+
+
+
+{//求两个数之和
+	int num1 = 0;
+	int num2 = 0;
+	int sum = 0;
+	scanf("%d%d", &num1, &num2);
+	sum = num1 + num2;
+	printf("sum = %d\n", sum);
+}
+
+
+
+
+
+
+
+//局部变量和全局变量名字相同时，局部变量优先，故不建议相同，容易产生误会，产生bug
+//int num1 = 20;//全局变量——在代码块（{}）之外的变量，可适用于{}内，即作用域为整个工程
+//int main()
+//{
+//	int num2 = 30;//局部变量——在代码块（{}）之内的变量，不可适用于{}外,即作用域为{}内
+//	return 0;
+//}
+
+
+
+
+//向内存申请一块空间
+//int main()
+//{
+//	printf("%d\n", sizeof(char));//1   所占bit量（内存）——2^8-1
+//	printf("%d\n", sizeof(short)); //2                      2^16-1
+//	printf("%d\n", sizeof(int));//4                        2^32-1
+//	printf("%d\n", sizeof(long long));//8                   2^64-1
+//	printf("%d\n", sizeof(long));//4 or 8                    2^32-1 or 2^64-1
+//	printf("%d\n", sizeof(float));//4                       2^32-1
+//	printf("%d\n", sizeof(double));//8                      2^64-1
+//	return 0;
+//}
+//C语言国际标准规定/sizeof(long)>=sizeof(int)
+
+
+//int main()
+//{
+////	//int -整形
+////	//short int -短整型
+////	//long int -长整型
+////	char hh = 'A';//内存
+////	printf("%c\n", hh);//%c--打印字符格式的数据//\n为换行
+//	float f = 35.5f;
+//	printf("%f\n", f);
+////	double lf = 75.5;
+////	printf("%lf\n", lf);
+////	int age = 20;向内存申请2个字节（=16比特位）用来存放20
+////	printf("%d", age);//%d--打印整形十进制数据
+////	return 0;
+//}
+
+
+
+//int main()
+//{
+//	printf("hehe\n");
+//		return 0;
+//}
+
+
+
+
+
+
+////包含一个叫stdio.h的文件
+////std-标准输入输出 standard input output
+//#include <stdio.h>
+//
+//int main()//主函数-程序的入口-有且只有一个
+////int 整形
+////int main 要求返回一个整形值
+//{
+//	//这里完成任务
+//	//在屏幕上输出hello world
+//	//函数-printf function-printf-打印函数
+//	//库函数-C语言本身提供的函数
+//	//使用别人的东西-打招呼
+//	//include
+//	printf("hello world\n");
+//	return 0;
+//	//前后呼应，返回一个整型值
+//}
