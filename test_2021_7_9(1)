@@ -1,0 +1,99 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+#include <string.h>
+
+
+//'\n'为换行(属于转义字符)
+//'\t'为水平制表符(Tab)
+//'\\'第一个\用于消除第二个\的转移
+int main()
+{
+	//printf("%d\n", '\32');%d对应数字
+	//printf("%c\n", '\32');//\32八进制-->26十进制-->%c对应字符
+	printf("%d\n", strlen("c:\test\32\test.c"));
+	//printf("%c\n", '\'');
+	//printf("D:\\编程\\personal code\\test_2021_7_8\n");
+	//printf("\\\\\n");
+	//printf("abcn\n");
+	//printf("abc\n");
+	return 0;
+}
+
+
+
+
+
+//int main()
+//{
+//	//ASCII 编码
+//	//ASCII 码值
+//	char arr1[] = "abc";//数组
+//	//"abc"='a','b','c','\0'--'\0'字符串的结束标志
+//	char arr2[] = { 'a','b','c'};//'\0'=0
+//	printf("%s\n", arr1);
+//	printf("%s\n", arr2);
+//	//string length = strlen字符串长度
+//	printf("%d\n", strlen(arr1));//3
+//	printf("%d\n", strlen(arr2));//15--实际上是>=3的随机值
+//	return 0;
+//}
+
+
+
+
+
+
+
+//4.枚举常量
+//可以被一一列举
+//性别：男，女，保密
+//三原色：红，绿，蓝
+//星期
+
+//枚举关健 - enum
+
+//enum Sex
+//{
+//	MALE,
+//	FEMALE,
+//	SECRET
+//};
+////MALE,FEMALE,SECRET - 枚举常量
+//int main()
+//{
+//	//enum Sex s = FEMALE;
+//	printf("%d\n", MALE);//0
+//	printf("%d\n", FEMALE);//1
+//	printf("%d\n", SECRET);//2
+//	return 0;
+//}
+
+
+
+
+
+
+
+//3.#define 定义的标识符常量
+//#define MAX 10
+//int main()
+//{
+//	int arr[MAX] = {0};
+//	printf("%d\n", MAX);
+//	return 0;
+//}
+//int main()
+//{
+//	////2.const - 常属性
+//	////const修饰的常变量
+//	//const int n = 4;
+//	//int arr[n] = {0};//error
+//	//n = 20;
+//	//const int main = 4;//使num变量具有常属性，本质上是变量，可以用来表示一个不变的量，但是在用到常量的地方不可视为常量
+//	//printf("%d\n", num);
+//	//num = 8;
+//	//printf("%d\n", num);
+//	////1.字面常量
+//	////3；
+//}
