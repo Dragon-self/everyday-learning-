@@ -1,0 +1,53 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+//int main()
+//{
+//	int z = 1;
+//	int i = 0;
+//	int n = 0;
+//	scanf("%d", &n);
+//	for (i = 1; i <= n; i++)
+//	{
+//		z = z * i;
+//	}
+//	printf("%d", z);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int z = 1;
+//	int i = 0;
+//	int n = 0;
+//	int sum = 0;
+//	int s = 0;
+//	scanf("%d", &s);
+//	for (n = 1; n <= s; n++)
+//	{
+//		for (i = 1; i <= n; i++)
+//		{
+//		z = z * i;
+//		}
+//		sum = sum + z;
+//		z = 1;
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+
+int main()
+{
+	int z = 1;
+	int i = 0;
+	int n = 0;
+	int sum = 0;
+	int s = 0;
+	scanf("%d", &s);
+	for (n = 1; n <= s; n++)
+	{
+		z = z * n;
+		sum = sum + z;
+	}
+	printf("%d", sum);
+	return 0;
+}
