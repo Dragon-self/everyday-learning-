@@ -1,0 +1,48 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+void menu()
+{
+	printf("****************************************\n");
+	printf("********  1.play        0.exit  ********\n");
+	printf("****************************************\n");
+}
+
+
+void game()
+{
+	static int i = 1;
+	int ret = 0;
+	srand(i);
+	ret = rand();
+	printf("%d\n", ret);
+	i++;
+}
+
+int main()
+{
+	int input = 0;
+	do
+	{
+		menu();
+		printf("请选择>:");
+		scanf("%d", &input);
+		switch (input)
+		{
+		case 1:
+			game();
+			break;
+		case 0:
+			printf("退出游戏\n");
+			break;
+		default:
+			printf("选择错误\n");
+			break;
+		}
+	} while (input);
+	return 0;
+}//如果每次重置srand(i)，就会输出该数字i对应的第一个“随机值”，且每个数字i的第一个rand()都满足一定的规律：rand()=3i+38
+//如果不重置srand(i)，就会按顺序输出该数字i对应的“随机值”
+//此时使用srand(time(NULL))可以在不重置srand()的情况下按顺序输出“随机值”
+//因此为了避免因重置而出现随机数相近的问题，建议使用一个在循环外部不断改变的数，如时间戳
