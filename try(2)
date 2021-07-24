@@ -1,0 +1,18 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+//int main()
+//{
+//	char arr[] = "#########";
+//	printf("%s", arr);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[] = { 1,2,3,4 };
+//	printf("%d", *arr);
+//	return 0;
+//}
+//此文件为对数组概念的疑问
+//为什么表示整形时候数组为地址，表示字符时数组不为地址？
