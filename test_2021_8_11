@@ -1,0 +1,113 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int* p = &a;
+//	char b = 'w';
+//	int arr[10] = { 0 };
+//
+//	printf("%d\n", sizeof a);
+//	printf("%d\n", sizeof(int));
+//
+//	printf("%d\n", sizeof p);
+//	printf("%d\n", sizeof(int*));
+//
+//	printf("%d\n", sizeof(b));
+//	printf("%d\n", sizeof(char));
+//
+//	printf("%d\n", sizeof(arr));
+//	printf("%d\n", sizeof(int[10]));
+//	return 0;
+//}
+
+//int main()
+//{
+//	short s = 0;
+//	int a = 10;
+//	printf("%d\n", sizeof(s = a + 5));//2--short短整型
+//	//sizeof中的表达式不参与运算，不影响其他值
+//	printf("%d\n", s);//0
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 11;
+//	a = a | (1 << 2);
+//	printf("%d\n",a);//15
+//	a = a & (~(1 << 2));
+//	printf("%d\n", a);//11
+//	//00000000000000000000000000001011
+//	//00000000000000000000000000000100
+//	//00000000000000000000000000001111
+//	//
+//	//00000000000000000000000000001111
+//	//11111111111111111111111111111011
+//	//00000000000000000000000000001011
+//	//
+//	////int a = 0;
+//	////~ 按（2进制）位取反
+//	////00000000000000000000000000000000
+//	////11111111111111111111111111111111-补码
+//	////11111111111111111111111111111110-反码
+//	////10000000000000000000000000000001-原码
+//	////-1
+//	//printf("%d\n", ~a);
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 10;
+//	printf("%d\n", ++a);//前置加加，先使用再加加
+//	printf("%d\n", a++);//后置加加，先加加再使用
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = (int)3.14;//强制类型转换
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 3;
+//	int b = 5;
+//	int c = a && b;
+//	int d = a || b;
+//	printf("%d\n", c);
+//	printf("%d\n", d);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int i = 0, a = 1, b = 2, c = 3, d = 4;
+//	i = a++ && ++b && d++;
+//	printf("a=%d\n b=%d\n c=%d\n d=%d\n", a, b, c, d);
+//	return 0;
+//}//&&只要左边假，右边就不算
+
+//int main()
+//{
+//	int i = 0, a = 1, b = 2, c = 3, d = 4;
+//	i = a++ || ++b || d++;
+//	printf("a=%d\n b=%d\n c=%d\n d=%d\n", a, b, c, d);
+//	return 0;
+//}//||只要左边真，右边就不算
+
+int main()
+{
+	int a = 0;
+	int b = 0;
+	b = (a > 5 ?  3 :  -3);//三目操作符
+	//if (a > 5)
+	//	b = 3;
+	//else
+	//	b = -3;
+	printf("%d", b);
+	return 0;
+}
