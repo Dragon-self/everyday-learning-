@@ -1,0 +1,112 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+
+//描述一个学生-一些数据
+//名字
+//年龄
+//电话
+//性别
+//struct 结构体关键字 Stu - 结构体标签 struct Stu - 结构体类型
+//struct Stu
+//{
+//	//成员变量
+//	char name[20];
+//	short age;
+//	char tele[12];
+//	char sex[5];
+//}s1,s2,s3;//s1,s2,s3 是三个全局的结构体变量
+
+//typedef struct Stu
+//{
+//	//成员变量
+//	char name[20];
+//	short age;
+//	char tele[12];
+//	char sex[5];
+//}Stu;
+//
+//int main()
+//{
+//	struct Stu s1 = {"张三",20,"123456789122","男"};
+//	Stu s2 = {"旺财",30,"141754744123","保密"};
+//	return 0;
+//}
+
+//struct S
+//{
+//	int a;
+//	char c;
+//	char arr[20];
+//	double d;
+//};
+//
+//struct T
+//{
+//	char ch[10];
+//	struct S s;
+//	char* pc;
+//};
+//
+//int main()
+//{
+//	char arr[] = "hello world";
+//	struct T t = { "hehe",{100,'w',"hello bit",3.14},arr };
+//	printf("%s\n", t.ch);//hehe
+//	printf("%s\n", t.s.arr);//hello bit
+//	printf("%lf\n", t.s.d);//3.14
+//	printf("%s\n", t.pc);//hello world
+//	return 0;
+//}
+
+//typedef struct Stu
+//{
+//	char name[20];
+//	short age;
+//	char tele[12];
+//	char sex[5];
+//}Stu;
+//
+//void Print1(Stu s)
+//{
+//	printf("name：%s\n", s.name);
+//	printf("age： %d\n", s.age);
+//	printf("tele：%s\n", s.tele);
+//	printf("sex： %s\n", s.sex);
+//}
+//
+//void Print2(Stu* ps)
+//{
+//	printf("name：%s\n", ps->name);
+//	printf("age： %d\n", ps->age);
+//	printf("tele：%s\n", ps->tele);
+//	printf("sex： %s\n", ps->sex);
+//}
+//
+//int main()
+//{
+//	Stu s = { "李四",40,"13592797097","男" };
+//	//打印结构体数据
+//	//Print1和Print2 哪个更好？Print2
+//	Print1(s);
+//	Print2(&s);
+//	return 0;
+//}
+
+int Add(int x, int y)
+{
+	int z = 0;
+	z = x + y;
+	return z;
+}
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int ret = 0;
+	ret = Add(a, b);
+	return 0;
+}
+//栈区——局部变量、函数的形式参数、函数调用
+//堆区——动态内存分配、malloc/free、realloc、calloc
+//静态区——全局变量、静态变量
