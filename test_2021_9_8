@@ -1,0 +1,87 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+
+//int main()
+//{
+//	//字符指针
+//	char ch = 'w';
+//	char* p = &ch;
+//	const char* p2 = "abcdef";
+//	//指针数组 - 数组 - 存放指针的数组
+//	int* arr[10];
+//	char* ch[5];
+//	//数组指针 - 指向数组的指针
+//	//int* p3 -> 整形指针 - 指向指向的指针
+//	//char* p4 ->字符指针 - 指向字符的指针
+//	int arr2[5];//数组
+//	int(*pa)[5] = &arr2;//取出数组的地址，pa就是一个数组指针
+//
+//	return 0;
+//}
+
+#include <stdio.h>
+
+//void test(int arr)//int arr== int arr[] == int* arr == int* arr[]
+//{}
+//
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	test(arr);
+//	return 0;
+//}
+
+//void test(int arr[3][5])
+//{}
+//void test1(int arr[][5])
+//{}
+//void test2(int(*p)[5])
+//{}
+////void test3(int**p)//error
+////{}
+////void test4(int arr[3][])//error
+////{}
+//
+//int main()
+//{
+//	int arr[3][5] = { 0 };
+//	test(arr);//二维数组传参
+//	test1(arr);
+//	test2(arr);
+//	return 0;
+//}
+#include <stdio.h>
+//函数指针 - 指向函数的指针 - 存放函数的地址
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	printf("%d\n", Add(a, b));
+//	printf("%p\n", Add);
+//	printf("%p\n", &Add);
+//	//&函数名 和函数名 都是函数的地址
+//	int(*pa)(int, int) = Add;
+//	printf("%d\n", (*pa)(a, b));
+//	printf("%d\n", pa(a, b));
+//  printf("%d\n", Add(a, b));//Add == pa
+//	return 0;
+//}
+
+
+void print(char* str)
+{
+	printf("%s\n", str);
+}
+int main()
+{
+	print("hello world");
+	void(*p)(char*) = print;
+	(*p)("hello world");
+	return 0;
+}
+
