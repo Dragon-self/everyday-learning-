@@ -1,0 +1,42 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+	char ch[] = { 'a','b','c','b','c','d'};
+	char arr[] = "abcdef";
+	printf("%d\n", sizeof(arr));// 7
+	printf("%d\n", sizeof(arr+0));// 4/8
+	printf("%d\n", sizeof(*arr));// 1
+	printf("%d\n", sizeof(arr[1]));// 1
+	printf("%d\n", sizeof(&arr));// 4/8
+	printf("%d\n", sizeof(&arr+1));// 4/8
+	printf("%d\n", sizeof(&arr[0]+1));// 4/8
+
+	printf("%d\n", strlen(arr));// 6
+	printf("%d\n", strlen(arr + 0));// 6
+	//printf("%d\n", strlen(*arr));// error
+	//printf("%d\n", strlen(arr[1]));// error
+	printf("%d\n", strlen(&arr));// 6 警告   &arr - 数组的地址 - 数组指针 char*(*p)[7]
+	printf("%d\n", strlen(&arr + 1));// 随机值
+	printf("%d\n", strlen(&arr[0] + 1));// 5
+	//int strlen(const char*arr);
+
+	char* p = "abcdef";
+	printf("%d\n", sizeof(p));// 4/8
+	printf("%d\n", sizeof(p + 1));// 4/8
+	printf("%d\n", sizeof(*p));// 1
+	printf("%d\n", sizeof(p[0]));// 1
+	printf("%d\n", sizeof(&p));// 4/8
+	printf("%d\n", sizeof(&p + 1));// 4/8
+	printf("%d\n", sizeof(&p[0] + 1));// 4/8
+
+	printf("%d\n", strlen(p));// 6 
+	printf("%d\n", strlen(p + 1));// 5 
+	//printf("%d\n", strlen(*p));// error
+	//printf("%d\n", strlen(p[0]));// error
+	printf("%d\n", strlen(&p));// 随机值
+	printf("%d\n", strlen(&p + 1));// 随机值
+	printf("%d\n", strlen(&p[0] + 1));// 5
+	return 0;
+}
